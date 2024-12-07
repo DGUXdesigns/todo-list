@@ -1,11 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>FocusFlow | Dave The Dev</title>
 </head>
+
 <body>
-    
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="material-icons">dashboard</i>
+            <h2>Focus Flow</h2>
+        </div>
+
+        <nav>
+            <ul class="navigation">
+                <li><i class="material-icons">assignment</i>All Tasks</li>
+                <li><i class="material-icons">schedule</i>Today</li>
+                <li><i class="material-icons">event</i>Upcoming</li>
+            </ul>
+        </nav>
+
+        <div class="all-tasks">
+
+            <div class="all-projects">
+                <h2 class="project-list-title">My Projects</h2>
+
+                <ul class="project">
+                    <li class="active-project"><i class="material-icons">incomplete_circle</i>Work</li>
+                    <li><i class="material-icons">incomplete_circle</i>Meeting</li>
+                    <li><i class="material-icons">incomplete_circle</i>Training</li>
+                </ul>
+
+                <form action="">
+                    <input type="text" class="new-project" placeholder="New Project" aria-label="Name">
+                </form>
+            </div>
+        </div>
+
+    </aside>
+
+    <main>
+        <header>
+            <p>Hey there,</p>
+            <h2>Let's start planning</h2>
+        </header>
+
+        <hr>
+
+        <div class="task-display">
+            <div class="category-container">
+                <h1>Work</h1>
+                <p class="task-count">3 Tasks Remaining</p>
+            </div>
+
+            <div class="task-grid">
+
+                <div class="todo-card">
+                    <div class="todo-header">
+                        <div class="header-left">
+                            <h2 class="list-title">Presentation</h2>
+                            <p class="priority">High</p>
+                        </div>
+
+                        <div class="date">
+                            <p>Dec 31st</p>
+                        </div>
+                    </div>
+
+                    <div class="todo-body">
+                        <p class="description">Review Quarterly Data With Olivia</p>
+                        <div class="checklist">
+                            <div class="list-item">
+                                <input type="checkbox" id="item-1">
+                                <label for="item-1">
+                                    <span class="custom-checkbox"></span>
+                                    Revise Introduction
+                                </label>
+                            </div>
+                            <!-- /task-1 -->
+
+                            <div class="list-item">
+                                <input type="checkbox" id="item-2">
+                                <label for="item-2">
+                                    <span class="custom-checkbox"></span>
+                                    Simplify side layout
+                                </label>
+                            </div>
+                            <!-- /task-2 -->
+
+                            <div class="list-item">
+                                <input type="checkbox" id="item-3">
+                                <label for="item-3">
+                                    <span class="custom-checkbox"></span>
+                                    Print handouts for attendees
+                                </label>
+                            </div>
+                            <!-- /task-3 -->
+                        </div>
+
+                        <div class="new-item-creator">
+                            <form action="">
+                                <input type="text" class="new-item" placeholder="New item" aria-label="Name">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="btn-wrapper">
+                        <button><i class="material-icons">list</i></button>
+                        <button><i class="material-icons">edit</i></button>
+                        <button><i class="material-icons">delete</i></button>
+                        <button><i class="material-icons">assignment_turned_in</i></button>
+                    </div>
+                </div>
+
+                <div class="todo-card">
+                    <div class="todo-header">
+                        <div class="header-left">
+                            <h2 class="list-title">Presentation</h2>
+                            <p class="priority">High</p>
+                        </div>
+
+                        <div class="date">
+                            <p>Dec 31st</p>
+                        </div>
+                    </div>
+
+                    <div class="todo-body">
+                        <p class="description">Review Quarterly Data With Olivia</p>
+                        <div class="checklist">
+                            <div class="list-item">
+                                <input type="checkbox" id="item1-1">
+                                <label for="item1-1">
+                                    <span class="custom-checkbox"></span>
+                                    Revise Introduction
+                                </label>
+                            </div>
+                            <!-- /task-1 -->
+
+                            <div class="list-item">
+                                <input type="checkbox" id="item2-2">
+                                <label for="item2-2">
+                                    <span class="custom-checkbox"></span>
+                                    Simplify side layout
+                                </label>
+                            </div>
+                            <!-- /task-2 -->
+
+
+                        </div>
+
+                        <div class="new-item-creator">
+                            <form action="">
+                                <input type="text" class="new-item" placeholder="Add item" aria-label="Name">
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <div class="btn-wrapper">
+                        <button><i class="material-icons">list</i></button>
+                        <button><i class="material-icons">edit</i></button>
+                        <button><i class="material-icons">delete</i></button>
+                        <button><i class="material-icons">assignment_turned_in</i></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
