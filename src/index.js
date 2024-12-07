@@ -4,10 +4,13 @@ import { Project } from './projects';
 import { ProjectLibrary } from './projectLibrary';
 
 const LOCAL_STORAGE_PROJECT_KEY = 'project.projects';
+const LOCAL_STORAGE_ACTIVE_INDEX_KEY = 'activeProjectIndex';
+
 let projects = JSON.parse(localStorage.getItem(LOCAL_STORAGE_PROJECT_KEY)) || [];
 
 function save() {
     localStorage.setItem(LOCAL_STORAGE_PROJECT_KEY, JSON.stringify(projects));
+    localStorage.setItem(LOCAL_STORAGE_ACTIVE_INDEX_KEY, projectList.activeIndex);
 }
 
 
@@ -16,6 +19,11 @@ const projectList = new RenderProjects('[data-projects]');
 const myProjects = new ProjectLibrary(projects);
 const getProjects = myProjects.getProjects();
 
+// Retrieve active index from localStorage
+const savedActiveIndex = localStorage.getItem(LOCAL_STORAGE_ACTIVE_INDEX_KEY);
+if (savedActiveIndex) {
+    projectList.activeIndex = parseInt(savedActiveIndex, 10); // Set active index from storage
+}
 
 
 const newListForm = document.querySelector('[data-new-project-form]');
